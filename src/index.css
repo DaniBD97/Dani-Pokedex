@@ -1,0 +1,479 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+html {
+    box-sizing: border-box;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>;
+    font-style: normal; */
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* custom-toast.css */
+.last-item{
+    color: white;
+}
+.Toastify__toast--success {
+    background-color: black;
+    color: white;
+    border: 0.5px solid greenyellow;
+    /* Verde */
+}
+
+.Toastify__toast--error {
+    color: white;
+    background-color: black;
+    border: 1px solid red;
+    /* Rojo */
+}
+
+
+
+
+/* styles.css (o el nombre de tu archivo de estilos) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    /* Puedes ajustar el valor según tus preferencias */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Agrega otro estilo para controlar la apariencia predeterminada sin transición */
+.grid-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    left: -300px;
+    width: 200px;
+    z-index: 99;
+    position: absolute;
+    visibility: hidden;
+    background-color: #be9724;
+
+
+    /* Aplica la transición para el cambio de posición y visibilidad */
+    transition: left 300ms linear, visibility 300ms linear;
+}
+
+.nav.active {
+    left: 0;
+    visibility: visible;
+}
+
+
+.a {
+    z-index: 999;
+}
+
+/* Container Filters */
+.container-filters {
+    display: flex;
+    justify-content: center;
+    /* z-index: 99; */
+    /* position: fixed; */
+    top: 0;
+    left: -300px;
+    width: fit-content;
+    color: #555;
+    background-color: #f2f2f2;
+    height: 100%;
+    max-height: 100%;
+    /* Ajusta la altura máxima según tus necesidades */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+
+    transition: all 0.3s linear;
+
+
+
+}
+
+/* Si hay contenido dentro del contenedor, ajústalo */
+
+
+.container-filters .inner-content {
+    position: relative;
+}
+
+
+.container-filters.active {
+    left: 0;
+}
+
+.filter-by-type {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.filter-by-type span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.group-type {
+    display: flex;
+    gap: 10px;
+    width: 100px;
+    border-bottom: 2px rgb(223, 224, 225) solid;
+
+
+
+
+}
+
+.group-type:hover {
+
+    border-bottom: 2px rgb(174, 174, 174) solid;
+
+
+
+
+}
+
+.group-type label {
+    cursor: pointer;
+}
+
+/* Seccion de Favorites */
+
+.container-favorites {
+
+    display: flex;
+
+    flex-direction: column;
+    z-index: 9999;
+    position: absolute;
+    align-items: center;
+    left: -350px;
+
+
+
+
+
+
+
+
+
+
+
+    transition: all 0.3s linear;
+}
+
+.container-favorites.active2 {
+    left: 0;
+}
+
+.description {
+
+    font-family: "Medula One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.bounce {
+    animation: bounce 0.4s ease;
+}
+
+.bounce2 {
+    animation: bounce 1s ease-in infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.slide {
+    -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide2 {
+    -webkit-animation: slide-in-elliptic-top-fwd 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide3 {
+    -webkit-animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide4 {
+    -webkit-animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-elliptic-top-fwd {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        -webkit-transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.pokemon-image {
+    width: 500px;
+    /* Mantiene la proporción de aspecto */
+    position: relative;
+    /* Permite ajustar la posición de la imagen */
+    /* Mueve la imagen hacia arriba para que pueda salir del contenedor */
+}
+
+.swiper-container {
+    overflow: visible !important;
+    /* Anula el overflow hidden del contenedor del Swiper */
+}
+
+.pixelated {
+    image-rendering: pixelated;
+}
+
+.card {
+    border: #555 solid 1px;
+}
+
+
+
+.bg {
+    position: relative;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -5%)
+    }
+
+    20% {
+        transform: translate(-10%, 5%)
+    }
+
+    30% {
+        transform: translate(5%, -10%)
+    }
+
+    40% {
+        transform: translate(-5%, 15%)
+    }
+
+    50% {
+        transform: translate(-10%, 5%)
+    }
+
+    60% {
+        transform: translate(15%, 0)
+    }
+
+    70% {
+        transform: translate(0, 10%)
+    }
+
+    80% {
+        transform: translate(-15%, 0)
+    }
+
+    90% {
+        transform: translate(10%, 5%)
+    }
+
+    100% {
+        transform: translate(5%, 0)
+    }
+}
+
+
+.Galerry {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-flow: row dense;
+    grid-auto-rows: minmax(200px, auto);
+    /* Establece la altura mínima en 150px y la altura máxima en automático */
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    /* Establece el espacio entre las celdas de la cuadrícula a 0 */
+}
+
+.Start {
+    display: grid;
+    grid-column-start: span 2;
+    row-gap: 20px;
+    width: 300px;
+}
+
+.Start-2 {
+    display: grid;
+    grid-column-start: span 2;
+    row-gap: 20px;
+
+}
+
+
+.End {
+    display: grid;
+    grid-column-end: span 2;
+    row-gap: 20px;
+}
+
+.End-2 {
+    display: grid;
+    grid-column-end: span 2;
+    row-gap: 20px;
+}
+
+
+.Galerry img {
+    width: 100%;
+    object-fit: cover;
+    z-index: 999;
+}
+
+.title {
+    position: relative;
+    visibility: hidden;
+    color: white;
+    z-index: 1;
+    background-color: #be9724;
+    padding: 10px;
+    top: -35px;
+
+}
+
+.Container {
+    position: relative;
+}
+
+
+.Container:hover {
+    animation: bounce 0.4s ease;
+}
+
+.Container:hover .title {
+    visibility: visible;
+
+}
+
+.swiper2 {
+
+    max-width: 300px !important;
+    overflow: hidden !important;
+}
