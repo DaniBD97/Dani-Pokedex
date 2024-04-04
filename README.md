@@ -2,8 +2,11 @@
 
 Esta app es hecho unicamente por un fanatico sin necesidad de monetizar su contenido
 
+En esta app podras encontrar el uso de context con app Router para cosumir en conjunto con axios la api POKEAPI
+https://pokeapi.co/docs/v2
+
 Currently, two official plugins are available:
-![Logo2](https://github.com/DaniBD97/Pokedex/assets/146767599/e1de895f-aff4-4b7b-b2f3-71c6799fb31f)
+
 
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
