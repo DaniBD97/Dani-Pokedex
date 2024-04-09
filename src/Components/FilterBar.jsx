@@ -16,7 +16,7 @@ export const FilterBar = () => {
 
             <div className='filter-by-type'>
             {/* <button className='btnCerrar' onClick={() => setActive(!Active)}> <span> X </span>cerrar</button> */}
-                <h4 className='font-bold'>Filtrar:</h4>
+                <h4 className='font-bold text-white'>Filter By Type:</h4>
                 
 
                 <div className='group-type'>
@@ -26,7 +26,7 @@ export const FilterBar = () => {
                         name='all'
                         id='all'
                     />
-                    <label htmlFor='all'>Todos</label>
+                    <label htmlFor='all' className='text-white '>All</label>
                 </div>
 
                 <div className='group-type'>
@@ -36,7 +36,7 @@ export const FilterBar = () => {
                         name='grass'
                         id='grass'
                     />
-                    <label htmlFor='grass'>Planta</label>
+                    <label className='text-green-400 ' htmlFor='grass'>Grass</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -45,7 +45,7 @@ export const FilterBar = () => {
                         name='fire'
                         id='fire'
                     />
-                    <label htmlFor='fire'>Fuego</label>
+                    <label className='text-red-400' htmlFor='fire'>Fire</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -54,7 +54,7 @@ export const FilterBar = () => {
                         name='bug'
                         id='bug'
                     />
-                    <label htmlFor='bug'>Bicho</label>
+                    <label htmlFor='bug' className='text-lime-400'>Bug</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -63,7 +63,7 @@ export const FilterBar = () => {
                         name='fairy'
                         id='fairy'
                     />
-                    <label htmlFor='fairy'>Hada</label>
+                    <label htmlFor='fairy' className='text-pink-400'>Fairy</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -72,7 +72,7 @@ export const FilterBar = () => {
                         name='dragon'
                         id='dragon'
                     />
-                    <label htmlFor='dragon'>Dragón</label>
+                    <label htmlFor='dragon' className='text-purple-500'>Dragón</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -81,7 +81,7 @@ export const FilterBar = () => {
                         name='ghost'
                         id='ghost'
                     />
-                    <label htmlFor='ghost'>Fantasma</label>
+                    <label htmlFor='ghost' className='text-purple-400'>Ghost</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -90,7 +90,7 @@ export const FilterBar = () => {
                         name='ground'
                         id='ground'
                     />
-                    <label htmlFor='ground'>Tierra</label>
+                    <label htmlFor='ground' className='text-amber-600'>Ground</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -99,7 +99,7 @@ export const FilterBar = () => {
                         name='normal'
                         id='normal'
                     />
-                    <label htmlFor='normal'>Normal</label>
+                    <label htmlFor='normal' className='text-white'>Normal</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -108,7 +108,7 @@ export const FilterBar = () => {
                         name='psychic'
                         id='psychic'
                     />
-                    <label htmlFor='psychic'>Psíquico</label>
+                    <label htmlFor='psychic' className='text-fuchsia-600'>Psychic</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -117,7 +117,7 @@ export const FilterBar = () => {
                         name='steel'
                         id='steel'
                     />
-                    <label htmlFor='steel'>Acero</label>
+                    <label htmlFor='steel' className='text-gray-300'>Steel</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -126,7 +126,7 @@ export const FilterBar = () => {
                         name='dark'
                         id='dark'
                     />
-                    <label htmlFor='dark'>Siniestro</label>
+                    <label htmlFor='dark' className='text-[#9841f1]'>Dark</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -135,7 +135,7 @@ export const FilterBar = () => {
                         name='electric'
                         id='electric'
                     />
-                    <label htmlFor='electric'>Eléctrico</label>
+                    <label htmlFor='electric' className='text-yellow-200'>Electric</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -144,7 +144,7 @@ export const FilterBar = () => {
                         name='fighting'
                         id='fighting'
                     />
-                    <label htmlFor='fighting'>Lucha</label>
+                    <label htmlFor='fighting' className='text-orange-400'>Fighting</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -153,7 +153,7 @@ export const FilterBar = () => {
                         name='flying'
                         id='flying'
                     />
-                    <label htmlFor='flying'>Volador</label>
+                    <label htmlFor='flying' className='text-cyan-300'>Flying</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -162,7 +162,7 @@ export const FilterBar = () => {
                         name='ice'
                         id='ice'
                     />
-                    <label htmlFor='ice'>Hielo</label>
+                    <label htmlFor='ice' className='text-cyan-100'>Ice</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -171,7 +171,7 @@ export const FilterBar = () => {
                         name='poison'
                         id='poison'
                     />
-                    <label htmlFor='poison'>Veneno</label>
+                    <label htmlFor='poison' className='text-purple-300'>Poison</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -180,7 +180,7 @@ export const FilterBar = () => {
                         name='rock'
                         id='rock'
                     />
-                    <label htmlFor='rock'>Roca</label>
+                    <label htmlFor='rock' className='text-[#d1a26c]'>Rock</label>
                 </div>
                 <div className='group-type'>
                     <input
@@ -189,7 +189,7 @@ export const FilterBar = () => {
                         name='water'
                         id='water'
                     />
-                    <label htmlFor='water'>Agua</label>
+                    <label htmlFor='water' className='text-blue-600'>Water</label>
                 </div>
             </div>
         </div>

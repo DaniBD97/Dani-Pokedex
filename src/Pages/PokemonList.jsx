@@ -88,7 +88,7 @@ export const PokemonList = () => {
       <div className='flex justify-between ml-36 '>
         {/* barra de busqueda */}
         <form onSubmit={handleSubmit}>
-          <div className='  flex  text-lg w-[300px]'>
+          <div className='  flex ml-[100px] text-lg w-[300px]'>
 
             <input
               className='outline-none flex-1 rounded-md'
@@ -129,8 +129,8 @@ export const PokemonList = () => {
 
         </div>
         <SortPokemon />
-        <button><IconList color='white'/></button>
-        <button><IconMist color='white'/></button>
+        {/* <button><IconList color='white'/></button>
+        <button><IconMist color='white'/></button> */}
         
         
         {/* FIN ICONO FILTRO */}
@@ -140,7 +140,7 @@ export const PokemonList = () => {
     
         <FilterBar />
 
-        <article className={`flex-auto h-fit pt-4 gap-2 grid grid-cols-[repeat(auto-fit,_minmax(210px,_1fr))] `}>
+        <article className={`flex-auto h-fit pt-4 gap-2 grid grid-cols-[repeat(auto-fit,_minmax(310px,_1fr))] `}>
 
           {filteredPokemons.length === 0 ? (
             <>

@@ -21,22 +21,26 @@ export const NavFavoritesPokemon = () => {
     }, [Favorites]);
 
     return (
-        <>
+        <article className='flex flex-col'>
             {/* Este div se muestra como un contenedor de la lista de favoritos */}
-            <div className={`container-favorites bg-black overflow-hidden  ${ModalFav ? 'active2' : ''}`}>
+            <div className={`container-favorites w-[300px] bg-black overflow-hidden   ${ModalFav ? 'active2' : ''}`}>
 
 
-                <Link className='text-white' to={'/favoritos'}>Ver</Link>
+                <Link className='text-white text-[20px] bg-gray-900 p-4 rounded-lg mb-4' to={'/favoritos'}>Click Me!</Link>
 
                 {Favorites.map(pokemon => (
-                    <div key={pokemon.id} className='bg-white rounded-full z-30' >
+                    <div key={pokemon.id} className='bg-white  relative rounded-full z-30' >
                         <div className=''>
                             <img className='absolute -z-[999] w-[100%]' src="./src/assets/Pokeball.png" alt="" />
                         </div>
                         <img className=' mx-auto z-[1] w-[150px]  ' src={pokemon?.sprites.other["official-artwork"].front_default} alt={pokemon?.name} />
                     </div>
                 ))}
+
+
             </div>
-        </>
+
+          
+        </article>
     );
 };

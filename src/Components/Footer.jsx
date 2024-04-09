@@ -11,7 +11,7 @@ export default function Footer() {
       </div>
       <div className='flex flex-col leading-10 '>
         <h1 className='text-2xl text border-b-2 '>Dani Company ©2024</h1>
-        <p className='mx-auto text-center text-white text-3xl'> Pokémon. ©1995 - 2024 Fan Inc</p>
+        <p className='mx-auto text-center text-white text-3xl'> Pokémon. ©1997 - 2024 Fan Inc</p>
 
       </div>
 

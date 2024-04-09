@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import SliderTop from '../Components/SliderTop';
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const [imageSrc, setImageSrc] = useState('');
@@ -65,7 +66,8 @@ export const Home = () => {
 
             </div>
             <div className='flex justify-end'>
-              <button className='flex p-4 mt-2 font-bold text-xl bg-black text-white rounded-md'>Galeria</button>
+              <Link className='flex p-4 mt-2 font-bold text-xl bg-black text-white rounded-md' to={"/Gallery"}>Gallery</Link>
+              
             </div>
 
             {/* fin */}

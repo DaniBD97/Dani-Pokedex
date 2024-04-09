@@ -6,12 +6,12 @@ export const SortPokemon = () => {
     const { sortPokemonList } = useContext(PokemonContext);
 
     const suppliers = [
-        { label: 'Ordena Por:', value: '' },
-        { label: 'Ordenar de La A-Z', value: 'asc' },
-        { label: 'Ordenar de La Z-A', value: 'desc' },
-        { label: 'Ordenar del 1 al 100', value: 'ascN' },
-        { label: 'Ordenar del 100 al 1', value: 'descN' },
-        { label: 'Favoritos', value: 'Fav' },
+        { label: 'Sort By All', value: '' },
+        { label: 'Sort By A-Z', value: 'asc' },
+        { label: 'Sort By Z-A', value: 'desc' },
+        { label: 'Sort By first at last', value: 'ascN' },
+        { label: 'Sort By last at first', value: 'descN' },
+        { label: 'Sort By Favorites', value: 'Fav' },
     ];
 
     const handleSortChange = (selectedOption) => {
@@ -19,7 +19,7 @@ export const SortPokemon = () => {
     };
 
     return (
-        <div className='z-20'>
+        <div className='z-20 mr-10 text-[20px] w-[290px]'>
             <Select
                 className='select-options'
                 defaultValue={suppliers[0]}

@@ -126,8 +126,9 @@ body::-webkit-scrollbar {
     top: 0;
     left: -300px;
     width: fit-content;
-    color: #555;
-    background-color: #f2f2f2;
+    font-weight: 900;
+    font-size: 23px;
+    background-color: #000000;
     height: 100%;
     max-height: 100%;
     /* Ajusta la altura máxima según tus necesidades */
@@ -198,7 +199,7 @@ body::-webkit-scrollbar {
 .container-favorites {
 
     display: flex;
-
+    
     flex-direction: column;
     z-index: 9999;
     position: absolute;
@@ -316,7 +317,7 @@ body::-webkit-scrollbar {
 
 
 .pokemon-image {
-    width: 500px;
+    width: 400px;
     /* Mantiene la proporción de aspecto */
     position: relative;
     /* Permite ajustar la posición de la imagen */
@@ -324,7 +325,7 @@ body::-webkit-scrollbar {
 }
 
 .swiper-container {
-    overflow: visible !important;
+    /* overflow: visible !important; */
     /* Anula el overflow hidden del contenedor del Swiper */
 }
 

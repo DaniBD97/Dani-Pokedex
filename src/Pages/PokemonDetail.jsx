@@ -39,18 +39,20 @@ export const PokemonDetail = () => {
   const [currentId, setCurrentId] = useState(null);
 
   const navigate = (direction) => {
+  
     if (direction === 'prev') {
       const prevId = currentId - 1;
       if (prevId > 0) {
-        // Establecer el estado de carga como verdadero al iniciar la navegación
-        return `/pokemon/${prevId}`;
+        setCurrentId(prevId);
+         // Actualizar el estado currentId
       }
     } else if (direction === 'next') {
       const nextId = currentId + 1;
-      // Establecer el estado de carga como verdadero al iniciar la navegación
-      return `/pokemon/${nextId}`;
+      setCurrentId(nextId); 
+     // Actualizar el estado currentId
     }
   };
+
 
   useEffect(() => {
     setCurrentId(parseInt(id));
@@ -64,7 +66,7 @@ export const PokemonDetail = () => {
     <article className='  bg-[#232323] h-[100%]  mx-auto  flex justify-center '>
 
       {loading ? (
-        <div className='mt-[250px]  h-fit w-fit  '><Loader /></div>
+        <div className='mt-[250px] h-screen '><Loader /></div>
       ) : (
         <article className='flex flex-col '>
           <Breadcrumb className='items-center mt-9 !text-slate-200 flex' >
@@ -78,7 +80,7 @@ export const PokemonDetail = () => {
             <div className="flex items-center mt-4 justify-between mr-[2rem] ml-[3.5rem] mb-5  mx-auto text-center">
               {currentId > 1 && (
                 <>
-                  <Link to={navigate('prev')} className="flex w-[100%] gap-2  h-[50px] bg-black  hover:bg-blue-700 text-white font-bold py-2 px-4 ">
+                  <Link to={`/pokemon/${currentId - 1}`} className="flex w-[100%] gap-2  h-[50px] bg-black  hover:bg-blue-700 text-white font-bold py-2 px-4 ">
                     <IconSquareRoundedArrowLeftFilled width={30} height={30} /> <span className='text-xl uppercase'>{previousPokemon}</span> <span> #{formatPokemonId(currentId - 1)}</span>
                   </Link>
 
@@ -86,7 +88,7 @@ export const PokemonDetail = () => {
 
               )}
 
-              <Link to={navigate('next')} className=" flex gap-2 justify-end items-center w-[100%] h-[50px]  bg-black  hover:bg-blue-700 text-white font-bold py-2 px-4 ">
+              <Link to={`/pokemon/${currentId + 1}`} className="flex gap-2 justify-end items-center w-[100%] h-[50px]  bg-black  hover:bg-blue-700 text-white font-bold py-2 px-4 ">
                 <span>#{formatPokemonId(currentId + 1)}</span><span className='text-xl uppercase'> {nextPokemon}</span>  <IconSquareRoundedArrowRightFilled width={30} height={30} />
               </Link>
 
@@ -121,7 +123,7 @@ export const PokemonDetail = () => {
                   {[PokemonInfo?.image, PokemonInfo?.image2].map((image, index) => (
                     <SwiperSlide key={index}>
                       <div className='bg-slate-200 border-blue-200 max-w-[300px] rounded-[40px] mt-2 mb-2'>
-                        <img className='w-[300px]' src={image} alt="" />
+                        <img loading='lazy' className='w-[300px]' src={image} alt="" />
                       </div>
                     </SwiperSlide>
                   ))}

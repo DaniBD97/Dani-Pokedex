@@ -44,7 +44,7 @@ export const Nav = () => {
 
             <Link className=' p-4 w-[200px]  h-[50px]  text-white  hover:bg-[#F2F2F2] border-b-white border-b-4 hover:text-black  hover:border-b-white  transition-all ease-in' to="/">Home</Link>
             <Link className=' p-4 w-[200px] h-[50px]  text-white hover:bg-blue-600 border-b-blue-600 border-b-4 hover:text-white hover:border-b-white transition-all ease-in ' to="/ListaPokemon">Pokedex</Link>
-            <Link className=' p-4 w-[200px] h-[50px]  text-white hover:bg-red-500 border-b-red-500 border-b-4 hover:text-white hover:border-b-white transition-all ease-in ' to={"/Favoritos"}>Favoritos</Link>
+            <Link className=' p-4 w-[200px] h-[50px]  text-white hover:bg-red-500 border-b-red-500 border-b-4 hover:text-white hover:border-b-white transition-all ease-in ' to={"/Favoritos"}>Favorites</Link>
             <Link className=' p-4 w-[200px] h-[50px] text-white hover:bg-green-500 border-b-green-500 border-b-4 hover:text-white  hover:border-b-white transition-all ease-in' to="/Top">Ranking10</Link>
             <Link className=' p-4 w-[200px] h-[50px] text-white hover:bg-purple-500 border-b-purple-500 border-b-4 hover:text-white  hover:border-b-white transition-all ease-in' to="/Gallery">Gallery</Link>
 
