@@ -19,6 +19,7 @@ Donde conseguir tu Key: https://pokeapi.co/
 Tambien esta aplicacion el patron de diseño Context
 
 Tratamos de englobar todas las llamadas - funciones en un solo archivo para transferir informacion a multiples partes del proyecto
+```bash
 Ventajas:
 ° Mejora el rendimiento debido a que todo esta cargando en primer lugar
 ° Evita el duplicado de funciones 
@@ -26,6 +27,7 @@ Desventajas:
 ° dificil lectura o entendimiento el archivo podria tener 50000 lineas de codigo 
 ° demasiados Prompt
 ° aveces se necesita colocar una nueva llamada en un archivo si no este no funciona.
+```
 
 
 
